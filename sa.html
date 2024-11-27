@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <section class="container"> 
+    <header>Sign up</header>
+    <form action="signup.php" method="POST" class="form" onsubmit="return validateForm()">
+      <div class="input-box">
+        <label>Full Name</label>
+        <input type="text" name="full_name" placeholder="Enter full name" required />
+      </div>
+
+      <div class="input-box address">
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="Enter Email Address" required /> 
+      </div>
+
+      <div class="column">
+       <div class="input-box">
+          <label>Phone Number</label>
+          <input type="number" name="phone_number" placeholder="Enter Phone Number" maxlength="11" minlength="11" required /> 
+      </div>
+
+      <div class="input-box">
+          <label>Birth Date</label>
+          <input type="date" name="birth_date" placeholder="Enter Birth date" required /> 
+      </div>
+      </div>
+
+      <div class="gender-box">
+        <h3>Gender</h3>
+        <div class="gender-option">
+          <div class="gender">
+            <input type="radio" id="check-male" name="gender" value="Male" checked />
+            <label for="check-male">Male</label>
+          </div>
+
+          <div class="gender">
+            <input type="radio" id="check-female" name="gender" value="Female" />
+            <label for="check-female">Female</label>
+          </div>
+
+          <div class="gender">
+            <input type="radio" id="check-other" name="gender" value="Prefer not to say" />
+            <label for="check-other">Prefer not to say</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-box">
+        <label>Password</label>
+        <input type="password" name="password" id="password" placeholder="Enter Password" required />
+      </div>
+
+      <div class="input-box">
+        <label>Confirm Password</label>
+        <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required />
+        <div class="error-message">Passwords do not match!</div>
+      </div>
+
+      <button type="submit">Submit</button>
+
+      <p style="text-align: center; margin-top: 20px;">
+        Already have an account? <a href="login.html">Login here</a>
+      </p>
+    </form>
+    </section>
+</body>
+</html>
